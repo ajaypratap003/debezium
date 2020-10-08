@@ -37,11 +37,9 @@ import SearchIcon from '@patternfly/react-icons/dist/js/icons/search-icon';
 import FilterIcon from '@patternfly/react-icons/dist/js/icons/filter-icon';
 import ExportIcon from '@patternfly/react-icons/dist/js/icons/export-icon';
 import EllipsisVIcon from '@patternfly/react-icons/dist/js/icons/ellipsis-v-icon';
-import ExternalLinkIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon'
 import ExchangeAltIcon from '@patternfly/react-icons/dist/js/icons/exchange-alt-icon';
 import { Table, TableHeader, TableBody } from '@patternfly/react-table';
 import DebeziumWizard from './debeziumWizard';
-import Notebook from './notebook';
 
 function dataCapturesToRows(instances) {
   return instances.map(({ name, namespace, connector, connectorURL, connectorPort, databaseName }) => (

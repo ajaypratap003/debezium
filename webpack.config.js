@@ -12,8 +12,11 @@ module.exports = (env = {}, argv) => {
   const isProd = argv.mode === 'production';
   const { remoteSuffix } = env;
   const publicPath = (isProd && remoteSuffix)
-    ? `http://jupyter${remoteSuffix}/`
+    ? `http://debezium${remoteSuffix}/`
     : `http://localhost:${port}/`;
+  const jupyterPath = (isProd && remoteSuffix)
+    ? `http://jupyter${remoteSuffix}/`
+    : `http://localhost:${env.jupyterPort}/`;
 
   return ({
     entry: "./src/index",
@@ -63,7 +66,6 @@ module.exports = (env = {}, argv) => {
         name,
         filename: "remoteEntry.js",
         exposes: {
-          "./notebook": "./src/components/notebook",
           "./debeziumTable": "./src/components/debeziumTable",
         },
         shared: {

@@ -18,7 +18,6 @@ import {
 } from '@patternfly/react-core';
 import BellIcon from '@patternfly/react-icons/dist/js/icons/bell-icon';
 import CogIcon from '@patternfly/react-icons/dist/js/icons/cog-icon';
-import HelpIcon from '@patternfly/react-icons/dist/js/icons/help-icon';
 import logoDebezium from './images/logo-debezium.svg';
 import DebeziumTable from "./components/debeziumTable";
 
