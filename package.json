@@ -1,7 +1,7 @@
 {
   "name": "debezium",
   "version": "0.0.0",
-  "port": 3003,
+  "port": 8080,
   "private": true,
   "devDependencies": {
     "@babel/core": "7.11.4",
@@ -20,12 +20,12 @@
   },
   "scripts": {
     "start": "npm run serve",
-    "build": "webpack --mode production --env.remoteSuffix=-ums-poc.apps.uxd1.patternfly.org",
+    "build": "webpack --mode production --env.remoteSuffix=-ums-poc.apps.uxd.n2z6.p1.openshiftapps.com",
     "clean": "rm -rf public",
     "develop": "webpack-dev-server",
     "serve": "node scripts/serve",
-    "nodeshift-deploy": "scripts/nodeshift.sh deploy debezium",
-    "nodeshift-undeploy": "scripts/nodeshift.sh undeploy debezium",
+    "nodeshift-deploy": "env NAMESPACE=ums-poc scripts/nodeshift.sh deploy debezium",
+    "nodeshift-undeploy": "env NAMESPACE=ums-poc scripts/nodeshift.sh undeploy debezium",
     "deploy": "node scripts/deploy"
   },
   "dependencies": {
